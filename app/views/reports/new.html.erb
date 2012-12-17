@@ -1,5 +1,12 @@
-<h1>New report</h1>
+<h1>Report a pedestrian hazard</h1>
+<h2>How do you want to start?</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#picture-upload" class='btn'>Upload a picture</a></li>
+      <li><a href="#point-map" class='btn'>Select a point on a map</a></i>
+      <li><a href="mailto:peds@eldondev.com" class='btn'>Email a picture</a></li>
+      <li><a href="sms:404492629" class='btddn'>Text us!</a></li>
+    </ul>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', reports_path %>
+    <form id='picture-upload'>
+      Select a picture: <input type="file">
+    </form>
