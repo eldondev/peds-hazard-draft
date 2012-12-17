@@ -7,7 +7,7 @@ class CreateReports < ActiveRecord::Migration
       t.string :email
       t.string :name
       t.string :description
-      t.string :picfile
+      t.file :picfile
 
       t.timestamps
     end

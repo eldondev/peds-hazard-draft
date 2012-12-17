@@ -6,7 +6,7 @@ Peds::Application.routes.draw do
   # first created -> highest priority.
 
   # Sample of regular route:
-  match '/' => redirect('/reports/new')
+  root :to => redirect('/reports/new')
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
