@@ -2,9 +2,23 @@
 <h2>How do you want to start?</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#picture-upload" class='btn'>Upload a picture</a></li>
-      <li><a href="#point-map" class='btn'>Select a point on a map</a></i>
-      <li><a href="mailto:peds@eldondev.com" class='btn'>Email a picture</a></li>
-      <li><a href="sms:404492629" class='btddn'>Text us!</a></li>
+      <li><a href="#point-map" class='btn' onclick="renderMap">Select a point on a map</a></i>
+      <li><a href="mailto:peds@eldondev.com?Subject=\"Hazard Report\"" class='btn'>Email a picture</a></li>
     </ul>
-
-    <%= render 'minform' %>
+    <%= raw '<br/>' * 50  %>
+    <div id="picture-upload">
+      <%= raw '<br/>' * 5  %>
+      <div class='hero-unit'>
+        <h1>Submit a picture</h1>
+        <h2>We will try to get information about the hazard from the picture metadata</h2>
+        <%= render 'minform' %>
+      </div>
+    </div>
+    <%= raw '<br/>' * 50  %>
+    <div id="point-map">
+      <%= raw '<br/>' * 5  %>
+      <div class="hero-unit">
+        <div id="demoMap" style="height:250px"></div>
+      </div>
+    </div>
+    <%= raw '<br/>' * 50  %>

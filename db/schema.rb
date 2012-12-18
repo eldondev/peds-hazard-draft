@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121217170331) do
+ActiveRecord::Schema.define(:version => 20121218043452) do
 
   create_table "reports", :force => true do |t|
     t.decimal  "latitude"
@@ -21,8 +21,12 @@ ActiveRecord::Schema.define(:version => 20121217170331) do
     t.string   "name"
     t.string   "description"
     t.string   "picfile"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "picfile_file_name"
+    t.string   "picfile_content_type"
+    t.integer  "picfile_file_size"
+    t.datetime "picfile_updated_at"
   end
 
 end

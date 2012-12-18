@@ -41,6 +41,12 @@ class ReportsController < ApplicationController
   # POST /reports.json
   def create
     @report = Report.new(params[:report])
+    logger.info "eldon #{@report}"
+    @report.save
+    logger.info "eldon2  #{@report.picfile.path}"
+    exif = EXIFR::JPEG.new(@report.picfile.path)
+    @report.latitude = exif.gps.latitude
+    @report.longitude = exif.gps.longitude
 
     respond_to do |format|
       if @report.save
