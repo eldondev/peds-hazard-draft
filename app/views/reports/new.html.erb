@@ -2,7 +2,7 @@
 <h2>How do you want to start?</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#picture-upload" class='btn'>Upload a picture</a></li>
-      <li><a href="#point-map" class='btn' onclick="renderMap">Select a point on a map</a></i>
+      <li><a href="#point-map" class='btn' id="renderMap">Select a point on a map</a></i>
       <li><a href="mailto:peds@eldondev.com?Subject=\"Hazard Report\"" class='btn'>Email a picture</a></li>
     </ul>
     <%= raw '<br/>' * 50  %>
@@ -18,7 +18,7 @@
     <div id="point-map">
       <%= raw '<br/>' * 5  %>
       <div class="hero-unit">
-        <div id="demoMap" style="height:250px"></div>
+        <iframe id="mapFrame" style="height:250px"></iframe>
       </div>
     </div>
     <%= raw '<br/>' * 50  %>

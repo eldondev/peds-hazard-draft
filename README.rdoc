@@ -1,5 +1,14 @@
 == Welcome to Eldon's draft of the PEDS hazard reporting app
 
+Key technologies:
+* Rails
+* Paperclip
+* Coffeescript for all javascript needs
+* Twitter bootstrap via rails gem
+* Externally hosted OpenStreetMap
+* (planned) Modernizr
+
+
 === Goals
     
 * Allow hazard picture upload
@@ -18,5 +27,7 @@
 
 === Launch
 * Clone the repo
-* Run runserver
+* bundle
+* rake db:migrate
+* rails server
 
