@@ -7,8 +7,6 @@ $ () ->
   console.log 'here'
   $.getScript 'http://www.openlayers.org/api/OpenLayers.js'
   $("#renderMap").click ->
-    d = $("#someFrame")[0].contentWindow.document; 
-    d.open
-    d.close
-    $("body", d).append "<div id=\"demoMap\"></div>
+    $("#mapFrameDiv")[0].innerHTML = '<iframe id="demoMap" src="/map.html" style="height:270px" class="span9"></iframe>'
+    console.log "Doin' it"
 
