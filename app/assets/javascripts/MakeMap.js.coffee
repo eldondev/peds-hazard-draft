@@ -1,16 +1,4 @@
 $.getScript 'http://www.openlayers.org/api/OpenLayers.js', () ->
-  OpenLayers.Control.Click = OpenLayers.Class(OpenLayers.Control, {                
-   initialize: (options) -> 
-       OpenLayers.Control.prototype.initialize.apply(
-           this, arguments
-       ); 
-       this.handler = new OpenLayers.Handler.Click(
-           this, {
-               'click': () ->
-                  alert "Woot" 
-           }
-       );
-  });
   lat            = 33.7553;
   lon            = -84.3799;
   zoom           = 10;
@@ -26,16 +14,11 @@ $.getScript 'http://www.openlayers.org/api/OpenLayers.js', () ->
   markers = new OpenLayers.Layer.Markers( "Markers" );
   map.addLayer(markers);
   map.setCenter(position, zoom);
-  alxert = () ->
-    alert "Gurp"
-  
+  alertWhere = (e) ->
+    lonlat = map.getLonLatFromViewPortPixel e.xy
+    alert "You clicked near " + lonlat.lat + " N, " + + lonlat.lon + " E"
   click = new OpenLayers.Control();
-  click.handler = new OpenLayers.Handler.Click(
-           this, {
-               'click': () ->
-                  alert "Woot" 
-           }
-       );
+  click.handler = new OpenLayers.Handler.Click(click, { 'click': alertWhere });
   OpenLayers.Util.extend(click, { draw : () -> });
   console.log 1
   map.addControl(click);
