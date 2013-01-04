@@ -1,4 +1,4 @@
-== Welcome to Eldon's draft of the PEDS hazard reporting app
+== A Mobile-friendly PEDS hazard reporting app
 
 Key technologies:
 * Rails
@@ -12,13 +12,13 @@ Key technologies:
 === Goals
     
 * Allow hazard picture upload
- * Infer hazard location from exif data on the map
+  - Infer hazard location from exif data on the map
 * Pick your location on a map (OSM)
- * Share your location from a compatible browser via html5, and use
-   that as the map center
+  - Share your location from a compatible browser via html5, and use
+    that as the map center
 * Share a picture via email
- * Identical to upload
- * Respond with link to session
+  - Identical to upload
+  - Respond with link to session
 
 === Stretch
 * Hook up to Mechanical turk to auto-classify images
