@@ -29,7 +29,13 @@ $.getScript 'http://www.openlayers.org/api/OpenLayers.js', () ->
   alxert = () ->
     alert "Gurp"
   
-  click = new OpenLayers.Control.Click();
+  click = new OpenLayers.Control();
+  click.handler = new OpenLayers.Handler.Click(
+           this, {
+               'click': () ->
+                  alert "Woot" 
+           }
+       );
   OpenLayers.Util.extend(click, { draw : () -> });
   console.log 1
   map.addControl(click);
